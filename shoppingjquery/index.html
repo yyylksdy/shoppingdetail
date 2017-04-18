@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script data-require="jquery@3.0.0" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script data-require="angular.js@1.5.5" data-semver="1.5.5" src="app"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+<div ng-app="myApp">
+    <h1>This is Backbone Demo.</h1>
+    <div class="conatainer" id="container">
+        <!-- Add a product component with image of your choice -->
+        Product : Nice dress for all ocassions !
+        <div>
+            <img style="width:200px; height:200px" src="http://images.tedbakerimages.com/us%2FWomens%2FClothing%2FDresses%2FLAYLI-Gem-Gardens-bodycon-dress-Ivory%2FWS7W_LAYLI_IVORY_1.jpg.jpg?o=sI544@1mlWkSrq40JTFCHWUA22wj&V=08uX&" />
+        </div>
+        <br />
+        <br />
+        <div style="font-size:24px">
+            Price: <span id="priceSpan" class="badge badge-danger"></span>
+        </div>
+        <select id="facets" class="form-control">
+            <option value="Size">Please Selece to Continue</option>
+            <option value="Size">Size</option>
+            <option value="Color">Color</option>
+            <option value="Quantity">Quantity</option>
+        </select>
+    </div>
+    <div id="size-selection" style="display:none">
+        Size selection dialog
+        <form>
+            <div class="radio">
+                <label><input type="radio" name="sizes" value="small" data-price="500">Small</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="sizes" value="medium" data-price="600">Medium</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="sizes" value="large" data-price="800">Large</label>
+            </div>
+        </form>
+    </div>
+    <div id="color-selection" style="display:none">
+        Color selection dialog
+        <form>
+            <div class="radio">
+                <label><input type="radio" name="colors" value="blue" data-price="200">Blue</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="colors" value="green" data-price="700">Green</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="colors" value="white" data-price="600">White</label>
+            </div>
+        </form>
+    </div>
+    <div id="quantity-selection" style="display:none">
+        Quantity selection dialog
+        <form>
+            <input type="text" class="form-control"/>
+        </form>
+    </div>
+    <button id="next" class="btn btn-primary"> Next </button>
+    <div id="shipaddress" style="display:none">
+        <h2>
+            Shipping Address
+        </h2>
+        <div>
+            <label style="width:100px">AddressOne</label>
+            <input type="text" required="required" name="address1" id="addOne" autofocus="" />
+        </div>
+        <div>
+            <label style="width:100px">AddressTwo</label>
+            <input type="text" name="address2" id="addTwo" autofocus="" />
+        </div>
+        <div>
+            <label style="width:100px">City</label>
+            <input type="text" name="city" id="city" autofocus="" />
+        </div>
+        <div>
+            <label style="width:100px">State</label>
+            <input type="text" name="state" id="state" autofocus="" />
+        </div>
+        <div>
+            <label style="width:100px">ZipCode</label>
+            <input type="number" name="zipcode" id="zipcode" autofocus="" />
+        </div>
+        <div>
+            <button type="button" class="btn btn-success" id="finish">Finish</button>
+        </div>
+    </div>
+    <br />
+    <br />
+    <table id="analyticsinfo" class="table table-striped table-bordered table-hover" style="display:none">
+        <thead class="thead-inverse">
+        <tr>
+            <td>Attribute</td>
+            <td>Value</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Size</td>
+            <td name="size">Value</td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td name="color">Value</td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td name="quantity">Value</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td name="address">Value</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td name="city">Value</td>
+        </tr>
+        <tr>
+            <td>State</td>
+            <td name="state">Value</td>
+        </tr>
+        <tr>
+            <td>Zipcode</td>
+            <td name="zipcode">Value</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
