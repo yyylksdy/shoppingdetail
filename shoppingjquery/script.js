@@ -32,6 +32,7 @@ $('#next').on('click', function() {
         var base1 = parseInt($(size).attr('data-price'));
         var base2 = parseInt($(color).attr('data-price'));
         var q = parseInt(quantity.value);
+        $("#orgpriceSpan").html((base1+base2)*q*1.1);
         $("#priceSpan").html((base1+base2)*q);
         $('#shipaddress').show();
     }
